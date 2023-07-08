@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* fonts */
+  --ff-inter : 'Inter', sans-serif;
+  --ff-satisfy : 'Satisfy', cursive;
+
+  /* Colors */
+  --c-hero : #6919ff;
+  --c-white : #fffef9;
+  --c-oxford : #060918;
+  --c-light-oxford : #8b96b3;
+  --c-kinda-red : #ff2e5b;
+  /* Padding */
+  --p-4 : 0.25rem;
+  --p-8 : 0.5rem;
+  --p-12 : 0.75rem;
+  --p-16 : 1rem;
+  --p-20 : 1.25rem;
+  /* margin */
+  --m-4 : 0.25rem;
+  --m-8 : 0.5rem;
+  --m-12 : 0.75rem;
+  --m-16 : 1rem;
+  --m-20 : 1.25rem;
+
+  
+  line-height: 1.2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body{
+  height: auto;
+  width: auto;
+}
+a{
+  text-transform: none;
+}
+button{
+  height: fit-content;
+  background: transparent;
+}
+/* 
+@media ( max-width : 1199.98px){
+    
+}
+@media ( max-width : 991.98px){
+    
+}
+@media ( max-width : 767.98px){
+    
+}
+@media ( max-width : 575px){
+    
+}
+ */
