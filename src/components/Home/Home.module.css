@@ -1,15 +1,16 @@
 .hero{
-    height: 100vh;
+    height: auto;
     width: 100%;
 }
 .main{
+    
     position: relative;    
     height: 100vh;
     width: 100%;
     overflow: hidden;
     background: #6919ff;
     font-size: 75px;
-    perspective: 15em;
+    perspective: 5em;
     perspective-origin: 50% 50%;
     transition: perspective-origin 750ms ease-in-out;
 }
@@ -30,7 +31,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background:repeating-linear-gradient( 90deg, transparent -50px, transparent 38px, #fff 40px, #fff 38px );
+    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, #fff 40px, #fff 35px );
 }
 .right{
     position: absolute;
@@ -48,7 +49,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background:repeating-linear-gradient( 90deg, transparent -50px, transparent 38px, #fff 40px, #fff 38px );
+    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, #fff 40px, #fff 35px );
 }
 .blur{
     position: absolute;
@@ -89,6 +90,7 @@
 
 .btn{
     font-size: 1.5rem;
+    font-weight: 500;
     height: fit-content;
     position: relative;
     text-decoration: none;
@@ -117,7 +119,7 @@
     color : var(--c-hero);
 }
 .btn:hover::before{
-    transform: translateX(0) skewX(-45deg);
+    transform: translateX(0%) skewX(-45deg);
 }
 .trailer{
     position: fixed;
@@ -136,6 +138,18 @@
 .main:hover > .trailer{
     opacity: 1;
 }
+
+
+.aboutContainer{
+    height: 100vh;
+    background: var(--c-oxford);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    overflow: hidden;
+}
+
+
 
 
 @media ( max-width : 1199.98px){

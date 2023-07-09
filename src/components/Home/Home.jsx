@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import { throttle } from 'throttle-debounce';
 import { useRef } from 'react';
 import styles from './Home.module.css';
-
+import Canvas from '../Canvas/Canvas';
 
 const Home = () => {
     const trailer = useRef();
     const mainRef = useRef();
-    // const trailer = document.getElementById('trailer');
     const wordOne = document.getElementById('word-1');
     const dimensions = {
         centerX : window.innerWidth / 2,
@@ -15,8 +14,8 @@ const Home = () => {
     }
 
     const movement = {
-        dx : 10,
-        dy : 10
+        dx : 3,
+        dy : 3
     }
     const changeStyleX = throttle(16,(x,y)=>{
         if(x < dimensions.centerX && y < dimensions.centerY ){
@@ -37,15 +36,7 @@ const Home = () => {
     
 
     const handleMainMouseOver = (event)=>{
-
         changeStyleX(event.clientX, event.clientY);
-        // const x = event.clientX - trailer.current.offsetWidth / 2,
-        // y = event.clientY - trailer.current.offsetHeight / 2;
-     
-
-        // trailer.current.style.transform = `translate(${x}px, ${y}px)`
-        // console.log(trailer.current.style.transform);
-
     };
 
     useEffect(()=>{
@@ -68,12 +59,17 @@ const Home = () => {
                 the future of web<br/>
                 Interaction
                 </span>
-                <a href="" className={styles.btn}>
-                    Hit me up
+                <a href="src/assets/resume/AkashCV.pdf" className={styles.btn} target='_blank' >
+                    Resume
                 </a>
             </header>
-            {/* <span className={styles.trailer} ref={trailer}></span> */}
         </main>
+        <div className={styles.aboutContainer}>
+            {/* <Canvas /> */}
+            <aside className={styles.aboutme}>
+
+            </aside>
+        </div>
     </section>
   )
 }
