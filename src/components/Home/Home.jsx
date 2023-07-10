@@ -5,9 +5,8 @@ import styles from './Home.module.css';
 import Canvas from '../Canvas/Canvas';
 
 const Home = () => {
-    const trailer = useRef();
     const mainRef = useRef();
-    const wordOne = document.getElementById('word-1');
+    const torchRef =useRef();
     const dimensions = {
         centerX : window.innerWidth / 2,
         centerY : window.innerHeight / 2,
@@ -39,8 +38,21 @@ const Home = () => {
         changeStyleX(event.clientX, event.clientY);
     };
 
+
+    const handleTorchMove = (event)=>{
+        const torchEvent = torchRef.current;
+        let left = event.clientX;
+        let top = event.clientY;
+        setTimeout(()=>{
+            torchEvent.style.left = left + 'px';
+            torchEvent.style.top = top + 'px';
+
+        }, 200);
+    }
+
     useEffect(()=>{
         handleMainMouseOver;
+        handleTorchMove;
     },[]);
 
   return (
@@ -64,9 +76,14 @@ const Home = () => {
                 </a>
             </header>
         </main>
-        <div className={styles.aboutContainer}>
+        <div className={styles.aboutContainer} onMouseMove={handleTorchMove}>
             {/* <Canvas /> */}
+            <span className={styles.torch} ref={torchRef}></span>
+
             <aside className={styles.aboutme}>
+
+            </aside>
+            <aside className={styles.aboutImg}>
 
             </aside>
         </div>
