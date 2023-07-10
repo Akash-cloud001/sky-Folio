@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { throttle } from 'throttle-debounce';
 import { useRef } from 'react';
 import styles from './Home.module.css';
-import Canvas from '../Canvas/Canvas';
-
+import akash from '../../assets/images/akash.jpg'
 const Home = () => {
     const mainRef = useRef();
     const torchRef =useRef();
@@ -58,7 +57,7 @@ const Home = () => {
   return (
     <section className={styles.hero}>
 
-        <main className={styles.main} id="main" onMouseOver={handleMainMouseOver} ref={mainRef}>
+         <main className={styles.main} id="main" onMouseOver={handleMainMouseOver} ref={mainRef}>
             <div className={styles.left}></div>
             <div className={styles.right}></div>
             <div className={styles.blur}>
@@ -75,16 +74,23 @@ const Home = () => {
                     Resume
                 </a>
             </header>
-        </main>
+        </main> 
         <div className={styles.aboutContainer} onMouseMove={handleTorchMove}>
             {/* <Canvas /> */}
             <span className={styles.torch} ref={torchRef}></span>
 
             <aside className={styles.aboutme}>
-
+                <p className={styles.mep1}>
+                    Hi,<br />
+                    I'm &nbsp;<span>Akash</span><br/>
+                    Developer
+                </p>
+                <p className={styles.meintro}>
+                Transform your visions into reality, solve problems, and witness pixel-perfect masterpieces.
+                </p>
             </aside>
             <aside className={styles.aboutImg}>
-
+                <img src={akash} alt='my image'/>
             </aside>
         </div>
     </section>
