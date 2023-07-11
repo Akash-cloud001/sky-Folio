@@ -29,6 +29,11 @@
 .navLi{
     position: relative;
 }
+.navLi > a{
+    height: 100%;
+    width: 100%;
+    color: var(--c-white);
+}
 .liAnim::after{
     content: '';
     position: absolute;
@@ -38,10 +43,19 @@
     background: var(--c-white);
     bottom: -5px;
     left: 0;
-    animation: liAnima 100ms ease-in-out  forwards;
+    animation: liAnima 50ms ease-in-out  forwards;
 }
-
-
+.hamburger{
+    display: none;
+}
+.wrapper{
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    height: 100vh;
+    width: 100%;
+}
 @keyframes liAnima {
     0%{
         width: 0%;
@@ -49,4 +63,146 @@
     100%{
         width: 100%;
     }
+}
+
+@media ( max-width : 1199.98px){
+    .nav{
+        padding-inline: 8rem;
+    }
+    .navUl{
+        width: 40%;
+    }
+}
+@media ( max-width : 991.98px){
+    .nav{
+        padding-inline: 6rem;
+    }
+    .navUl{
+        width: 40%;
+    }
+}
+@media ( max-width : 767.98px){
+    .nav{
+        padding-inline: 4rem;
+    }
+    .navUl{
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 67px;
+        left: 0;
+        padding-top: var(--p-8);
+        padding-bottom: var(--p-8);
+        padding-inline: 4rem;
+        height: 0px;
+        width: 100%;
+        overflow: hidden;
+        transition: height 200ms ease-in-out;
+        z-index: 100;
+    }
+    .show{
+        display: flex;
+        height: 100px;
+        transition: height 200ms ease-in-out;
+    }
+    .navLi{
+        width: fit-content;
+    }
+    .hamburger{
+        display: block;
+        height: 20px;
+        width: 50px;
+        border: none;
+        position: relative;
+        z-index: 100;
+    }
+
+    .hamburger span{
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 60%;
+        background: var(--c-white);
+        border-radius: 5px;
+    }
+    .line1{
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .show1{
+        animation: show1 200ms cubic-bezier(0.77,0.2,0.05,1.0) forwards;
+
+    }
+    @keyframes show1 {
+        100%{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+    }
+
+    .line2{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .show2{
+        animation: show2 200ms cubic-bezier(0.77,0.2,0.05,1.0) forwards;
+    }
+    @keyframes show2 {
+        100%{
+            width: 0%;
+            opacity: 0;
+        }
+    }
+
+    .line3{
+        bottom: 6%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .show3{
+        animation: show3 200ms cubic-bezier(0.77,0.2,0.05,1.0) forwards;
+    }
+    @keyframes show3 {
+       100%{
+            bottom: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+    .wrapperShow{
+        display: block;
+    }
+
+}
+@media ( max-width : 575px){
+    .nav{
+        padding:var(--p-12) 2rem;
+    }
+    .brandName > span:nth-child(1){
+        font-size: large;
+    }
+    .brandName > span:nth-child(2){
+        font-size: large;
+    }
+    .hamburger{
+        height: 15px;
+    }
+    .hamburger > span{
+        height: 2px;
+        width: 50%;
+    }
+    .navUl{
+        top: 45px;
+        padding:var(--p-8) 2rem;
+    }
+}
+@media ( max-width : 424px){
+    .nav{
+        padding-inline: 1rem;
+    }
+    
 }

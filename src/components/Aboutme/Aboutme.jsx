@@ -18,7 +18,7 @@ const Aboutme = () => {
         handleTorchMove;
     },[]);
   return (
-    <div className={styles.aboutContainer} onMouseMove={handleTorchMove}>
+    <div className={styles.aboutContainer} onMouseMove={handleTorchMove} id='about'>
         <span className={styles.torch} ref={torchRef}> Hi</span>
 
         <aside className={styles.aboutme}>

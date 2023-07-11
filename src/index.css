@@ -42,9 +42,10 @@
 body{
   height: auto;
   width: auto;
+  scroll-behavior: smooth;
 }
 a{
-  text-transform: none;
+  text-decoration: none;
 }
 button{
   height: fit-content;
