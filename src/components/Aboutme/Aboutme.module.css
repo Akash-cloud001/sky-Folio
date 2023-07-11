@@ -1,0 +1,126 @@
+.aboutContainer{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: var(--c-oxford);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+.torch{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: -9px 1px 300px 200px var(--c-torch);
+    -moz-box-shadow: -9px 1px 300px 200px var(--c-torch);
+    box-shadow: -9px 1px 300px 200px var(--c-torch);
+    filter: blur(1.5rem);
+    position: absolute;
+    transition: opacity 300ms ease-in;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+}
+.aboutContainer:hover > .torch{
+    opacity: 1;
+}
+.aboutme{
+    height: 40%;
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    width: 90%;
+    margin-inline: auto;
+}
+.mep1{
+    font-family: var(--ff-inter);
+    font-size: 3rem;
+    font-weight: 800;
+    z-index: 10;
+}
+.mep1 > span{
+    text-transform: uppercase;
+    color: var(--c-kinda-red);
+    font-size: 3rem;
+    color: var(--c-hero);
+    text-shadow: 3px 3px 1px white ;
+}
+.meintro{
+    font-family: var(--ff-inter);
+    color: var(--c-light-oxford);
+    font-size: 1.2rem;
+    z-index: 10;
+}
+.aboutImg{
+    height: 100%;
+    width: 100%;
+}
+.aboutImg > div{
+    position: relative;
+    height: 100%;
+    width: 100%; 
+    background: url('../../assets/images/akash.jpg') no-repeat;
+    background-size :cover;
+    background-position: center;
+    z-index: 10;
+}
+
+@media ( max-width : 1199.98px){
+    .mep1{
+        font-size: 2.5rem;
+    }
+    .mep1 > span{
+        font-size: 2.5rem;
+    }
+    .meintro{
+        font-size: 1rem;
+    }
+}
+@media ( max-width : 991.98px){
+    .mep1{
+        font-size: 2rem;
+    }
+    .mep1 > span{
+        font-size: 2rem;
+    }
+    .meintro{
+        font-size: 1rem;
+    }
+    .torch{
+        display: none;
+    }
+}
+@media ( max-width : 767.98px){
+    .aboutContainer{
+        grid-template-columns: 1fr;
+        height: 100vh;
+        grid-template-rows: 2fr 1fr;
+    }
+    .aboutme{
+        height: auto;
+        gap: 1rem;
+    }
+    .aboutImg{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-position: center;
+    }
+}
+@media ( max-width : 575px){
+    .mep1{
+        font-size: 1.2rem;
+    }
+    .mep1 > span{
+        font-size: 1.3rem;
+    text-shadow: 2px 2px 1px white ;
+
+    }
+    .meintro{
+        font-size: small;
+    }
+}
