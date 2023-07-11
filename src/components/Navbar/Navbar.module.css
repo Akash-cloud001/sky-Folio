@@ -1,0 +1,52 @@
+.nav{
+    font-family: var(--ff-inter);
+    color: var(--c-white);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--p-20) 10rem;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.brandName > span:nth-child(1){
+    font-size: x-large;
+    font-weight: 600;
+    margin-right: 0.3rem;
+}
+.brandName > span:nth-child(2){
+    font-size: x-large;
+    font-weight: 400;
+
+}
+.navUl{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+.navLi{
+    position: relative;
+}
+.liAnim::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 0%;
+    background: var(--c-white);
+    bottom: -5px;
+    left: 0;
+    animation: liAnima 100ms ease-in-out  forwards;
+}
+
+
+@keyframes liAnima {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}

@@ -50,6 +50,9 @@ button{
   height: fit-content;
   background: transparent;
 }
+ul{
+  list-style: none;
+}
 /* 
 @media ( max-width : 1199.98px){
     
