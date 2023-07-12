@@ -3,13 +3,11 @@ import styles from './Home.module.css';
 import Hero from '../Hero/Hero';
 import Aboutme from '../Aboutme/Aboutme';
 import Navbar from '../Navbar/Navbar';
+import Skills from '../Skills/Skills';
 const Home = () => {
   const [children, setChildren] = useState([]);
   const homeRef = useRef({
     background : '',
-    about : false,
-    project : false,
-    contactMe : false
   })
 
   useEffect(()=>{
@@ -33,14 +31,6 @@ const Home = () => {
         homeRef.current.background = 'transparent';
       }
 
-      //to active navLinks as per the scroll
-      let gaps = [temp[1].clientHeight - 20, temp[1].clientHeight + temp[2].clientHeight - 20];
-      if(window.scrollY > gaps[0] && window.scrollY < gaps[1]){
-        homeRef.current.about = true;
-      }else{
-        homeRef.current.about = false;
-      }
-      
     };
 
     window.addEventListener('scroll', onScroll, {passive: true});
@@ -48,18 +38,16 @@ const Home = () => {
     return()=>{
       window.removeEventListener('scroll', onScroll)
     }
-  });
+  },[]);
 
   return (
     <section className={styles.home} ref={homeRef}>
         <Navbar 
-        color = {homeRef.current.background} 
-        isAbout = {homeRef.current.about}
-        isProject = {homeRef.current.project}
-        isContact = {homeRef.current.contactMe}
+          color = {homeRef.current.background} 
         />
         <Hero />
         <Aboutme />
+        <Skills />
     </section>
   )
 }

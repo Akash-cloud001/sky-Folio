@@ -11,12 +11,12 @@
 }
 
 
-.brandName > span:nth-child(1){
+.brandName>a> span:nth-child(1){
     font-size: x-large;
     font-weight: 600;
     margin-right: 0.3rem;
 }
-.brandName > span:nth-child(2){
+.brandName>a> span:nth-child(2){
     font-size: x-large;
     font-weight: 400;
 
@@ -26,25 +26,16 @@
     width: 25%;
     justify-content: space-between;
 }
-.navLi{
-    position: relative;
-}
-.navLi > a{
-    height: 100%;
-    width: 100%;
+
+
+.navLi a{
     color: var(--c-white);
+    cursor: pointer;
 }
-.liAnim::after{
-    content: '';
-    position: absolute;
-    display: inline-block;
-    height: 3px;
-    width: 0%;
-    background: var(--c-white);
-    bottom: -5px;
-    left: 0;
-    animation: liAnima 50ms ease-in-out  forwards;
+.navLi .active{
+    border-bottom: 5px solid var(--c-white) !important;
 }
+
 .hamburger{
     display: none;
 }
@@ -103,11 +94,12 @@
     }
     .show{
         display: flex;
-        height: 100px;
+        height: fit-content;
         transition: height 200ms ease-in-out;
     }
     .navLi{
         width: fit-content;
+        padding: var(--p-12) 0;
     }
     .hamburger{
         display: block;
@@ -182,10 +174,10 @@
     .nav{
         padding:var(--p-12) 2rem;
     }
-    .brandName > span:nth-child(1){
+    .brandName>a> span:nth-child(1){
         font-size: large;
     }
-    .brandName > span:nth-child(2){
+    .brandName>a> span:nth-child(2){
         font-size: large;
     }
     .hamburger{
