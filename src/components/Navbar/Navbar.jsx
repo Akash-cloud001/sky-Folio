@@ -17,13 +17,14 @@ const Navbar = (props) => {
   }
   return (
     <nav className={styles.nav} style={style}>
-      <div className={styles.brandName}>
+      <div className={styles.brandName} onClick={handleRedirectCloseHamburger}>
         <Link
         to='main' 
         spy={true}
         smooth={true}
         offset={0}
-        duration={1000}
+        duration={500}
+        onClick={handleRedirectCloseHamburger}
         >
           <span>SKY</span><span>FOLIO</span>
         </Link>
@@ -36,24 +37,24 @@ const Navbar = (props) => {
       <ul className={`${styles.navUl} ${hamburger?styles.show:''}`} style={hamburger?style:null}>
         <li className={`${styles.navLi}`}  onClick={handleRedirectCloseHamburger}>
             <Link 
-            activeClass="active" 
             to='about' 
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handleRedirectCloseHamburger}
             >
               About
             </Link>
         </li>
         <li className={`${styles.navLi}`}  onClick={handleRedirectCloseHamburger}>
             <Link 
-            activeClass="active" 
             to='skills' 
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
+            onClick={handleRedirectCloseHamburger}
             > 
               Skills
             </Link>
