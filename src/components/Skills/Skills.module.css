@@ -9,6 +9,7 @@
     color: var(--c-white);
     display: grid;
     grid-template-rows: 0.5fr 3fr;
+    gap: 1rem;
     place-items: center;
 }
 .header{
@@ -36,18 +37,18 @@
 }
 .skill{
     position: relative;
-    height: 8rem;
-    width: 8rem;
+    height: 6rem;
+    width: 6rem;
     filter: grayscale(1);
-    transition: filter 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: filter 500ms cubic-bezier(0.77,0.2,0.05,1.0);
 }
 .skill > img{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
 }
 .skillContent:nth-child(1) .skill{
     background: var(--c-hero);
@@ -80,6 +81,7 @@
 
 .skillabout{
     font-family: var(--ff-inter);
+    color: var(--c-light-oxford);
     font-size: x-large;
     font-weight: 400;
     letter-spacing: 0.1rem;
@@ -87,8 +89,72 @@
 }
 .skillContent:nth-child(odd) .skillabout::first-letter{
     color: var(--c-hero);
+    font-weight: 600;
 }
 .skillContent:nth-child(even) .skillabout::first-letter{
     color: var(--c-kinda-red);
+    font-weight: 600;
 }
 
+@media ( max-width : 1199.98px){
+    .header{
+        font-size: 2rem;
+    }
+    .skill{
+        height: 6rem;
+        width: 6rem;
+    }
+    .skill>img{
+        height: 3rem;
+        width: 3rem;
+    }
+    .skillabout{
+        font-size: larger;
+    }
+}
+@media ( max-width : 991.98px){
+    .skills{
+        background-size: 66%;
+    }
+}
+@media ( max-width : 767.98px){
+    .skills{
+        gap: 2rem;
+        background-size: 80%;
+        
+    }
+    .skillsName{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .skill{
+        height: 5rem;
+        width: 5rem;
+    }
+    .skill>img{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .skillabout{
+        font-size: medium;
+    }
+}
+@media ( max-width : 575px){
+    .skills{
+        padding: 2rem;
+        background-size: 110%;
+
+    }
+    .skill{
+        height: 4rem;
+        width: 4rem;
+    }
+    .skill>img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .skillabout{
+        font-size: small;
+    }
+}
