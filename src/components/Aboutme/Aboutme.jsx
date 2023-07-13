@@ -1,6 +1,5 @@
 import styles from './Aboutme.module.css';
-import React, { useEffect } from 'react';
-import { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Aboutme = () => {
     const torchRef =useRef();
@@ -8,10 +7,10 @@ const Aboutme = () => {
         const torchEvent = torchRef.current;
         let left = event.clientX;
         let top = event.clientY;
-        setTimeout(()=>{
+        // setTimeout(()=>{
             torchEvent.style.left = left + 'px';
             torchEvent.style.top = top + 'px';
-        }, 200);
+        // }, 200);
     }
 
     useEffect(()=>{
@@ -19,7 +18,7 @@ const Aboutme = () => {
     },[]);
   return (
     <div className={styles.aboutContainer} onMouseMove={handleTorchMove} id='about'>
-        <span className={styles.torch} ref={torchRef}> Hi</span>
+        <span className={styles.torch} ref={torchRef}> </span>
 
         <aside className={styles.aboutme}>
             <p className={styles.mep1}>

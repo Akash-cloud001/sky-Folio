@@ -4,9 +4,15 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = (props) => {
   const { color } = props;
-  const [hamburger, setHamburger] = useState(false)
-  const style = {
-    background : color,
+  const [hamburger, setHamburger] = useState(false);
+  const style = color === 'transparent' || color === ''? {
+    backgroundColor : color,
+    transition : 'background 250ms ease-in-out',
+    backdropFilter : 'none',
+  } :
+  {
+    backgroundColor : color,
+    backdropFilter : 'blur(20px) saturate(180%)',
     transition : 'background 250ms ease-in-out'
   }
   const handleHamburger = (e)=>{
@@ -72,9 +78,16 @@ const Navbar = (props) => {
             </Link>
         </li>
         <li className={`${styles.navLi}`} onClick={handleRedirectCloseHamburger}>
-            <a  href='#contact'>
+          <Link 
+            to='footer' 
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={handleRedirectCloseHamburger}
+            > 
               Hit Me Up
-            </a>
+            </Link>
         </li>
       </ul>
       <div className={`${styles.wrapper} ${hamburger?styles.wrapperShow:''}`} onClick={handleHamburger}></div>

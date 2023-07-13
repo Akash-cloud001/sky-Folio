@@ -94,6 +94,9 @@
     }
 }
 @media ( max-width : 767.98px){
+    .torch{
+        display: none;
+    }
     .aboutContainer{
         grid-template-columns: 1fr;
         height: 100vh;

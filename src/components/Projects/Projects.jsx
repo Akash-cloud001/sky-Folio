@@ -15,7 +15,7 @@ const Projects = () => {
         <div className={styles.wrapper} >
             <div className={styles.project}>
               <img className={styles.image} src={eStore} draggable='false'/>
-              <p className={styles.desc}>
+              <div className={styles.desc}>
                 <header className={styles.name}>E-Store</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
@@ -30,12 +30,12 @@ const Projects = () => {
                 <a href='https://e-store-14732.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
-              </p>
+              </div>
             </div>
             
             <div className={styles.project}>
             <img className={styles.image} src={colorPalette}  draggable='false'/>
-              <p className={styles.desc}>
+              <div className={styles.desc}>
                 <header className={styles.name}>Color Palette Generator</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
@@ -49,14 +49,14 @@ const Projects = () => {
                 <a href='https://color-palette-bf69a.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
-              </p>
+              </div>
               
             </div>
 
             <div className={styles.project}>
               <img className={styles.image} src={himalayan} draggable='false' />
 
-              <p className={styles.desc}>
+              <div className={styles.desc}>
                 <header className={styles.name}>Himalayan Tribe</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
@@ -70,7 +70,7 @@ const Projects = () => {
                 <a href='https://himalayantribefrontend.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
-              </p>
+              </div>
             </div>
         </div>
     </section>

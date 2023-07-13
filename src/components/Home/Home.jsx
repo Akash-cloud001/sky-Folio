@@ -5,6 +5,7 @@ import Aboutme from '../Aboutme/Aboutme';
 import Navbar from '../Navbar/Navbar';
 import Skills from '../Skills/Skills';
 import Projects from '../Projects/Projects';
+import Footer from '../Footer/Footer';
 const Home = () => {
   const [children, setChildren] = useState([]);
   const homeRef = useRef({
@@ -26,7 +27,7 @@ const Home = () => {
       }
       setChildren(temp);
       // to set Nav Background
-      if(window.scrollY >= (temp[0].clientHeight * 3)){
+      if(window.scrollY >= (temp[1].clientHeight )){
         homeRef.current.background = 'rgba(0,0,0,0.5)';
       }else{
         homeRef.current.background = 'transparent';
@@ -50,6 +51,7 @@ const Home = () => {
         <Aboutme />
         <Skills />
         <Projects />
+        <Footer />
     </section>
   )
 }
