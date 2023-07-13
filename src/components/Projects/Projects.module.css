@@ -1,11 +1,11 @@
 .projects{
-    min-height: 100vh;
+    min-height: auto;
     width: 100%;
     padding: calc(var(--p-16) * 4);
     background: var(--c-oxford) ;
     color: var(--c-white);
     display: grid;
-    grid-template-rows: 0.25fr 3fr;
+    grid-template-rows: 0.25fr 2fr;
     gap: 4rem;
     place-items: center;
 }
@@ -13,7 +13,7 @@
     font-family: var(--ff-inter);
     text-transform: uppercase;
     text-align: center;
-    max-height: 250px;
+    /* max-height: 250px; */
 }
 .header > h4{
     font-size: 1.5rem;
@@ -39,7 +39,7 @@
     gap: 4rem;
 }
 .project{
-    max-height: 400px;
+    max-height: auto;
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -61,9 +61,9 @@
     grid-row-end: 2;
 }
 .image{
-    height: 400px;
+    height: auto;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center center;
     
 }
@@ -77,8 +77,15 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-right: 1rem;
-   
-    /* gap: 8px; */
+}
+.name{
+    font-size: x-large;
+    font-family: var(--ff-inter);
+    letter-spacing: 0.1rem;
+    color: var(--c-white);
+}
+.name::first-letter{
+    color: var(--c-kinda-red);
 }
 .tech {
     display: grid;
@@ -101,48 +108,49 @@
     font-family: var(--ff-inter);
     font-size: medium;
     text-align: justify;
+    color: var(--c-light-oxford);
 }
 
 .btn{
+    display: inline-block;
     color: var(--c-white);
     font-family: var(--ff-inter);
     font-size: medium;
     border: none;
     background: var(--c-kinda-red);
-    padding: var(--p-8) var(--p-12);
+    padding: var(--p-12) var(--p-16);
     cursor: pointer;
+    outline: 1px solid var(--c-white);
+    outline-offset: -5px;
+    transition: 250ms;
 }
+.btn:hover,
+.btn:focus{
+    outline-offset: 7.5px;
+    outline-color: white;
+}
+
 @media ( max-width : 1199.98px){
     .header > div{
         font-size: 2.5rem;
+    }
+    .name{
+        font-size: large;
     }
     .tech >span{
         font-size: small;
     }
 }
 @media ( max-width : 991.98px){
-    .header > div{
-        font-size: 2rem;
-    }
     .projects{
-        padding-inline: 2rem;
-    }
-    .about{
-        font-size: 1rem;
-    }
-    .desc{
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-}
-@media ( max-width : 767.98px){
-    .projects{
-        padding-top: 0rem;
+        padding-inline: calc(var(--p-16) * 2);
+        padding-top: 2rem;
         padding-bottom: 1rem;
         grid-template-rows: 0.25fr 2fr;
-        gap: 0rem;
+        gap: 4rem;
     }
     .project{
+        /* padding-inline: 2rem; */
         max-height: max-content;
         height: auto;
         grid-template-columns: 1fr;
@@ -160,19 +168,42 @@
         grid-row-start: 2;
         grid-row-end: 3;
     }
+    .header > div{
+        font-size: 2rem;
+    }
+
+    .about{
+        font-size: 1rem;
+    }
     .desc{
-        gap: 1rem;
+        padding-top: 0;
+        padding-bottom: 0;
         padding-right: 0;
+        gap: 1rem;
     }
     .tech{
         width: 100%;
     }
+}
+@media ( max-width : 767.98px){
+    .project{
+        gap: 1rem;
+    }
+
+    .desc{
+        gap: 1rem;
+        padding-right: 0;
+    }
+    
     .btn,.about{
         font-size: small;
     }
     
 }
 @media ( max-width : 575px){
+    .image{
+        height: auto;
+    }
     .projects{
         padding-inline: 0;
     }
@@ -180,7 +211,7 @@
         font-size: medium;
     }
     .header>div{
-        font-size: large;
+        font-size: 1.5rem
     }
     .tech > span{
         font-size: x-small;

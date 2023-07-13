@@ -2,9 +2,9 @@
     height: 100vh;
     width: 100%;
     padding: calc(var(--p-16) * 4);
-    background: var(--c-oxford) url('../../assets/svg/honeyComb1.png') no-repeat;
-    background-size: 50%;
-    background-position: bottom right;
+    background: var(--c-oxford) ;
+    /* background-size: 50%;
+    background-position: bottom right; */
     overflow: hidden;
     color: var(--c-white);
     display: grid;
@@ -145,6 +145,9 @@
     }
 }
 @media ( max-width : 575px){
+    .header{
+        font-size: 1.5rem;
+    }
     .skills{
         padding: 2rem;
         background-size: 110%;

@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './Projects.module.css';
+import eStore from '../../assets/images/E-s.png';
+import colorPalette from '../../assets/images/colorPalette.png';
+import himalayan from '../../assets/images/H.png';
 const Projects = () => {
   return (
     <section id='projects' className={styles.projects}>
@@ -11,8 +14,9 @@ const Projects = () => {
         </header>
         <div className={styles.wrapper} >
             <div className={styles.project}>
-              <img className={styles.image} src='https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' draggable='false'/>
+              <img className={styles.image} src={eStore} draggable='false'/>
               <p className={styles.desc}>
+                <header className={styles.name}>E-Store</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
                   <span>CSS</span>
@@ -21,17 +25,18 @@ const Projects = () => {
                   <span>Firebase</span>
                 </div>
                 <div className={styles.about}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                E-store is a React-based app developed with Firebase and Material UI. It offers an intuitive online shopping experience, featuring a sleek and responsive user interface. E-store leverages Firebase for real-time data synchronization, user authentication, and secure data storage. Material UI enhances the visual appeal and provides a consistent design language.
                 </div>
-                <a className={styles.btn}>
+                <a href='https://e-store-14732.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
               </p>
             </div>
 
             <div className={styles.project}>
-            <img className={styles.image} src='https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'  draggable='false'/>
+            <img className={styles.image} src={colorPalette}  draggable='false'/>
               <p className={styles.desc}>
+                <header className={styles.name}>Color Palette Generator</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
                   <span>CSS</span>
@@ -39,9 +44,9 @@ const Projects = () => {
                   <span>MUI</span>
                 </div>
                 <div className={styles.about}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                Color Palette Generator is a React app built with Material UI, enabling users to generate beautiful color palettes. With an intuitive interface, users can explore a wide range of color combinations and export them for use in design projects. Material UI ensures a visually appealing and user-friendly experience.
                 </div>
-                <a className={styles.btn}>
+                <a href='https://color-palette-bf69a.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
               </p>
@@ -49,9 +54,10 @@ const Projects = () => {
             </div>
 
             <div className={styles.project}>
-              <img className={styles.image} src='https://images.unsplash.com/photo-1548021682-1720ed403a5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80' draggable='false' />
+              <img className={styles.image} src={himalayan} draggable='false' />
 
               <p className={styles.desc}>
+                <header className={styles.name}>Himalayan Tribe</header>
                 <div className={styles.tech}>
                   <span>HTML</span>
                   <span>CSS</span>
@@ -59,9 +65,9 @@ const Projects = () => {
                   <span>Jquery</span>
                 </div>
                 <div className={styles.about}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                Himalayan Tribe is a responsive multi-page frontend website designed for booking tourism packages and rides in the Himalayan region. Created using HTML, CSS, and JavaScript, the website provides an immersive user experience with a visually appealing design. Users can easily browse and book various tourism packages and rides.
                 </div>
-                <a className={styles.btn}>
+                <a href='https://himalayantribefrontend.web.app/' target='_blank' className={styles.btn}>
                   Visit Website
                 </a>
               </p>

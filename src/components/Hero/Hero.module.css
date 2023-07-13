@@ -93,12 +93,22 @@
     display: block;
     padding: var(--p-8) var(--p-12);
     border: 1px solid white;
-    color: white;
-    transition: color 500ms;
+    color: var(--c-hero);
+    outline: 1px solid var(--c-hero);
+    outline-offset: -5px;
+    transition: 250ms;
     overflow: hidden;
     cursor: pointer;
+    background: var(--c-white);
 }
-.btn::before{
+.btn:hover,
+.btn:focus{
+    outline-offset: 7.5px;
+    outline-color: white;
+    background: var(--c-hero);
+    color: var(--c-white);
+}
+/* .btn::before{
     content: '';
     position: absolute;
     top: 0; 
@@ -116,7 +126,7 @@
 }
 .btn:hover::before{
     transform: translateX(0%) skewX(-45deg);
-}
+} */
 
 
 @media ( max-width : 1199.98px){
