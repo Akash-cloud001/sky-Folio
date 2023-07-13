@@ -32,7 +32,7 @@ const Projects = () => {
                 </a>
               </p>
             </div>
-
+            
             <div className={styles.project}>
             <img className={styles.image} src={colorPalette}  draggable='false'/>
               <p className={styles.desc}>

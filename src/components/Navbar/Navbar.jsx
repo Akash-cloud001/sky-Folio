@@ -64,7 +64,7 @@ const Navbar = (props) => {
             to='projects' 
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-25}
             duration={500}
             onClick={handleRedirectCloseHamburger}
             > 
