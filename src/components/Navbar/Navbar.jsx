@@ -82,7 +82,7 @@ const Navbar = (props) => {
             to='footer' 
             spy={true}
             smooth={true}
-            offset={0}
+            offset={-30}
             duration={500}
             onClick={handleRedirectCloseHamburger}
             > 

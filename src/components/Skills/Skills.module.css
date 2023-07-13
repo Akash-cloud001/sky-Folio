@@ -3,8 +3,6 @@
     width: 100%;
     padding: calc(var(--p-16) * 4);
     background: var(--c-oxford) ;
-    /* background-size: 50%;
-    background-position: bottom right; */
     overflow: hidden;
     color: var(--c-white);
     display: grid;
@@ -13,6 +11,27 @@
     place-items: center;
 }
 .header{
+    font-family: var(--ff-inter);
+    text-transform: uppercase;
+    text-align: center;
+}
+.header>h4{
+    font-size: 1.5rem;
+    color: var(--c-hero);
+    margin-bottom: 1rem;
+
+}
+.header>h4::first-letter{
+    color: var(--c-white);
+    letter-spacing: 0.1rem;
+}
+.header>div{
+    font-size: 3rem;
+}
+.header > div::first-letter{
+    color: var(--c-kinda-red);
+}
+/* .header{
     font-size: 3rem;
     font-family: var(--ff-inter);
     text-transform: uppercase;
@@ -23,7 +42,7 @@
     font-weight: 600;
     color: var(--c-hero);
     letter-spacing: 0.1rem;
-}
+} */
 .skillsName{
     height: 100%;
     width: 100%;
@@ -101,8 +120,8 @@
 }
 
 @media ( max-width : 1199.98px){
-    .header{
-        font-size: 2rem;
+    .header > div{
+        font-size: 2.5rem;
     }
     .skill{
         height: 6rem;
@@ -117,6 +136,9 @@
     }
 }
 @media ( max-width : 991.98px){
+    .header > div{
+        font-size: 2rem;
+    }
     .skills{
         background-size: 66%;
     }
@@ -145,8 +167,11 @@
     }
 }
 @media ( max-width : 575px){
-    .header{
-        font-size: 1.5rem;
+    .header > h4{
+        font-size: medium;
+    }
+    .header>div{
+        font-size: 1.5rem
     }
     .skills{
         padding: 2rem;
