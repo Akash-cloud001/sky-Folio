@@ -60,9 +60,16 @@ const Navbar = (props) => {
             </Link>
         </li>
         <li className={`${styles.navLi}`} onClick={handleRedirectCloseHamburger}>
-            <a href='#projects'>
+        <Link 
+            to='projects' 
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={handleRedirectCloseHamburger}
+            > 
               Projects
-            </a>
+            </Link>
         </li>
         <li className={`${styles.navLi}`} onClick={handleRedirectCloseHamburger}>
             <a  href='#contact'>

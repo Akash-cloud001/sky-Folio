@@ -4,6 +4,7 @@ import Hero from '../Hero/Hero';
 import Aboutme from '../Aboutme/Aboutme';
 import Navbar from '../Navbar/Navbar';
 import Skills from '../Skills/Skills';
+import Projects from '../Projects/Projects';
 const Home = () => {
   const [children, setChildren] = useState([]);
   const homeRef = useRef({
@@ -48,6 +49,7 @@ const Home = () => {
         <Hero />
         <Aboutme />
         <Skills />
+        <Projects />
     </section>
   )
 }

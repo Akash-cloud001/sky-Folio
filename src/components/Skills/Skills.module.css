@@ -15,10 +15,14 @@
 .header{
     font-size: 3rem;
     font-family: var(--ff-inter);
+    text-transform: uppercase;
+    font-weight: 400;
+
 }
 .header::first-letter{
     font-weight: 600;
     color: var(--c-hero);
+    letter-spacing: 0.1rem;
 }
 .skillsName{
     height: 100%;

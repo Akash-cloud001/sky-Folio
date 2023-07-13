@@ -69,7 +69,7 @@
 }
 @media ( max-width : 991.98px){
     .nav{
-        padding-inline: 6rem;
+        padding-inline: 4rem;
     }
     .navUl{
         width: 40%;
