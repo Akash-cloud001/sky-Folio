@@ -95,6 +95,20 @@
 
 }
 
+
+.error{
+    color: var(--c-kinda-red);
+    width: fit-content;
+    text-align: center;
+}
+
+.success{
+    color: var(--c-success);
+    width: fit-content;
+    text-align: center;
+}
+.error>i, .success>i{font-size: large;}
+
 .social{
     display: flex;
     flex-direction: column;
@@ -134,12 +148,14 @@
 }
 
 @media ( max-width : 1199.98px){
-    .formDiv,.btn{
+    .formDiv,.btn,.error,.success{
         width: 100%;
     }
 }
 @media ( max-width : 991.98px){
-    
+    .error,.success{
+        font-size: small;
+    }
 }
 @media ( max-width : 767.98px){
     .header > div{
@@ -170,5 +186,8 @@
     }
     .benchmark{
         font-size: small;
+    }
+    .error{
+        text-align: start;
     }
 }
