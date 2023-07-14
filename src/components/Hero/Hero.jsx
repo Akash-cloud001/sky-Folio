@@ -2,6 +2,7 @@ import styles from './Hero.module.css';
 import React, { useEffect } from 'react';
 import { throttle } from 'throttle-debounce';
 import { useRef } from 'react';
+import cv from '../../assets/images/AkashCV.pdf';
 
 const Hero = () => {
     const mainRef = useRef();
@@ -54,7 +55,7 @@ const Hero = () => {
             the future of web<br/>
             Interaction
             </span>
-            <a href="src/assets/resume/AkashCV.pdf" className={styles.btn} target='_blank' >
+            <a href={cv} className={styles.btn} target='_blank' >
                 Resume
             </a>
         </header>

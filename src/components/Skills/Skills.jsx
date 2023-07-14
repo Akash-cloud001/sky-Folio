@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './Skills.module.css';
-
+import html from '../../assets/images/html-1.svg';
+import css from '../../assets/images/css-3.svg';
+import js from '../../assets/images/logo-javascript.svg';
+import reactjs from '../../assets/images/react-2.svg';
+import git from '../../assets/images/git-icon.svg';
+import figma from '../../assets/images/figma-1.svg';
 const Skills = () => {
   return (
     <section id='skills' className={styles.skills}>
@@ -15,7 +20,7 @@ const Skills = () => {
         <div className={styles.skillsName}>
             <div className={styles.skillContent}>
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/html-1.svg' />
+                    <img src={html} />
                 </div>
                 <p className={styles.skillabout}>
                     HTML
@@ -23,7 +28,7 @@ const Skills = () => {
             </div>
             <div className={styles.skillContent}>    
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/css-3.svg' />
+                    <img src={css} />
                 </div>
                 <p className={styles.skillabout}>
                     CSS
@@ -32,7 +37,7 @@ const Skills = () => {
 
             <div className={styles.skillContent}>
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/logo-javascript.svg' />
+                    <img src={js} />
                 </div>
                 <p className={styles.skillabout}>
                     JAVA SCRIPT
@@ -41,7 +46,7 @@ const Skills = () => {
 
             <div className={styles.skillContent}>
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/react-2.svg' /> 
+                    <img src={reactjs} /> 
                 </div>
                 <p className={styles.skillabout}>
                     react
@@ -50,7 +55,7 @@ const Skills = () => {
 
             <div className={styles.skillContent}>
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/git-icon.svg' />
+                    <img src={git} />
                 </div>
                 <p className={styles.skillabout}>
                     git
@@ -59,7 +64,7 @@ const Skills = () => {
 
             <div className={styles.skillContent}>
                 <div className={styles.skill}>
-                    <img src='src/assets/svg/figma-1.svg' />
+                    <img src={figma} />
                 </div>
                 <p className={styles.skillabout}>
                     figma

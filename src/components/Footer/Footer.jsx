@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Footer.module.css';
-import logo from '../../assets/svg/skyFolio.png';
-import emailjs from 'emailjs-com'
+import logo from '../../assets/images/skyFolio.png';
+import emailjs from 'emailjs-com';
 
 
 const Footer = () => {
