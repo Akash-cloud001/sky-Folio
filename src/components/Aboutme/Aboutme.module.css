@@ -52,7 +52,6 @@
     font-family: var(--ff-inter);
     color: var(--c-light-oxford);
     align-items: baseline;
-    text-align: justify;
     font-size: 1.2rem;
     z-index: 10;
 }
