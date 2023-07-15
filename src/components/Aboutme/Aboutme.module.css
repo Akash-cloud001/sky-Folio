@@ -80,6 +80,9 @@
     }
 }
 @media ( max-width : 991.98px){
+    .mep1, .mep1>span{
+        height: max-content;
+    }
     .mep1{
         font-size: 2rem;
     }
@@ -100,12 +103,13 @@
     .aboutContainer{
         grid-template-columns: 1fr;
         height: 100vh;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1.5fr 1fr;
     }
     .aboutme{
         height: auto;
         gap: 1rem;
     }
+
     .aboutImg{
         grid-column-start: 1;
         grid-column-end: 2;
@@ -116,14 +120,16 @@
 }
 @media ( max-width : 575px){
     .mep1{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .mep1 > span{
-        font-size: 1.3rem;
-    text-shadow: 2px 2px 1px white ;
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 1px white ;
 
     }
     .meintro{
-        font-size: small;
+        font-size: medium;
+        text-align:justify;
+        word-break: break-all;
     }
 }

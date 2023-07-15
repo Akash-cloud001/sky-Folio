@@ -168,25 +168,27 @@
 }
 @media ( max-width : 575px){
     .header > h4{
-        font-size: medium;
+        font-size: 1.3rem;
     }
     .header>div{
         font-size: 1.5rem
     }
     .skills{
         padding: 2rem;
+        padding-top: 4rem;
         background-size: 110%;
 
     }
     .skill{
-        height: 4rem;
-        width: 4rem;
+        height: 5rem;
+        width: 5rem;
     }
     .skill>img{
-        height: 2rem;
-        width: 2rem;
+        height: 2.5rem;
+        width: 2.5rem;
     }
     .skillabout{
-        font-size: small;
+        font-size: medium;
+        width: max-content;
     }
 }

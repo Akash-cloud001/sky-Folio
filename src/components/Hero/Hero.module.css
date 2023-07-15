@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background: #6919ff;
+    background: var(--c-oxford);
     font-size: 75px;
     perspective: 5em;
     perspective-origin: 50% 50%;
@@ -18,7 +18,7 @@
     left: 0;
     top: 50%;
     /* background-color: #4492ff; */
-    background:repeating-linear-gradient( 0deg, #6919ff -50px, #6919ff 36px, #fff 38px, #fff 36px );
+    background:repeating-linear-gradient( 0deg, var(--c-hero) -50px, var(--c-hero) 36px, var(--c-white) 38px, var(--c-white) 36px );
     transform: rotateY(45deg) translateY(-50%);
 }
 .left::after{
@@ -27,7 +27,7 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, #fff 40px, #fff 35px );
+    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, var(--c-white) 40px, var(--c-white) 35px );
 }
 .right{
     position: absolute;
@@ -35,8 +35,7 @@
     width: 50%;
     right: 0;
     top: 50%;
-    /* background-color: #4492ff; */
-    background:repeating-linear-gradient( 0deg, #6919ff -50px, #6919ff 36px, #fff 38px, #fff 36px );
+    background:repeating-linear-gradient( 0deg, var(--c-hero) -50px, var(--c-hero) 36px, var(--c-white) 38px, var(--c-white) 36px );
     transform: rotateY(-45deg) translateY(-50%);
 }
 .right::after{
@@ -45,28 +44,28 @@
     position: relative;
     height: 100%;
     width: 100%;
-    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, #fff 40px, #fff 35px );
+    background:repeating-linear-gradient( 90deg, transparent -17px, transparent 39px, var(--c-white) 40px, var(--c-white) 35px );
 }
 .blur{
     position: absolute;
     height: 150%;
     width: 60%;
-    background: #6919ff;
+    background: var(--c-hero);
     filter: blur(1.5em);
-    /* border-radius: 50%; */
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%) translateZ(50px);
+    z-index: 10;
 }
 
 
 .header{
-    z-index: 10;
+    z-index: 12;
     position: absolute;
     top: 50%;
     left: 50%;
-    color: white;
-    transform: translate(-50%,-50%);
+    color: var(--c-white);
+    transform: translate(-50%,-50%) translateZ(50px);
     font-family: var(--ff-inter);
     text-transform: capitalize;
     text-align: center;
@@ -77,11 +76,12 @@
     height: 60%;
     letter-spacing: 0.1rem;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .word1{
     position: relative;
     font-size: 5rem;
+    color: var(--c-white);
 }
 
 .btn{
@@ -92,7 +92,7 @@
     text-decoration: none;
     display: block;
     padding: var(--p-8) var(--p-12);
-    border: 1px solid white;
+    border: 1px solid var(--c-white);
     color: var(--c-hero);
     outline: 1px solid var(--c-hero);
     outline-offset: -5px;
@@ -104,7 +104,7 @@
 .btn:hover
 {
     outline-offset: 7.5px;
-    outline-color: white;
+    outline-color: var(--c-white);
     background: var(--c-hero);
     color: var(--c-white);
 }
@@ -112,7 +112,7 @@
 
 @media ( max-width : 1199.98px){
     .header{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .word1{
         font-size: 4rem;
@@ -120,13 +120,14 @@
 }
 @media ( max-width : 991.98px){
     .header{
+        font-size: 2rem;
         height: 60%;
         width: 100%;
     }
 }
 @media ( max-width : 767.98px){
     .header{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .word1{
         font-size: 3.5rem;
@@ -137,8 +138,15 @@
     
 }
 @media ( max-width : 575px){
+    .blur{
+        filter: blur(1.5rem);
+
+    }
     .header{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        height: max-content;
+        gap: 2rem;
+        width: 100vw;
     }
     .word1{
         font-size: 3rem;

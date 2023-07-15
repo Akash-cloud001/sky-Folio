@@ -139,10 +139,10 @@
         font-size: 2.5rem;
     }
     .name{
-        font-size: large;
+        font-size: larger;
     }
     .tech >span{
-        font-size: small;
+        font-size: medium;
     }
 }
 @media ( max-width : 991.98px){
@@ -200,7 +200,7 @@
     }
     
     .btn,.about{
-        font-size: small;
+        font-size: medium;
     }
     
 }
@@ -212,16 +212,17 @@
         padding-inline: 0;
     }
     .header > h4{
-        font-size: medium;
+        font-size: 1.3rem;
     }
     .header>div{
         font-size: 1.5rem
     }
     .tech > span{
-        font-size: x-small;
+        font-size: small;
 
     }
     .desc{
+        gap: 1.5rem;
         padding: 1rem;
     }
 }

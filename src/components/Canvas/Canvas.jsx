@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import myPic from '../../assets/images/me2Enhanced.png';
+import myPic from '../../assets/images/akash.jpg';
 import { imgBase64 } from '../../assets/images/ImgString';
 const Canvas = () => {
 

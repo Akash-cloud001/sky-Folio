@@ -27,7 +27,7 @@ const Aboutme = () => {
                     Frontend <span>Developer</span>
             </p>
             <p className={styles.meintro}>
-            Transform your visions into reality, solve problems, and witness pixel-perfect masterpieces with me.
+            Transform your visions into reality, solve problem, and witness pixel-perfect masterpieces with me.
             </p>
         </aside>
         <aside className={styles.aboutImg}>

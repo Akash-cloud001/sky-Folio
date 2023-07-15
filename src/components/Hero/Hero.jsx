@@ -20,13 +20,19 @@ const Hero = () => {
         if(x < dimensions.centerX && y < dimensions.centerY ){
             mainRef.current.style.perspectiveOrigin = `${50 + movement.dx}% ${50 + movement.dy}%`;
         }
+        else{
+            mainRef.current.style.perspectiveOrigin = `${50}% ${50}%`;
+
+        }
         if(x > dimensions.centerX && y < dimensions.centerY){
             mainRef.current.style.perspectiveOrigin = `${50 - movement.dx}% ${50 + movement.dy}%`;
 
         }
+        
         if(x < dimensions.centerX && y > dimensions.centerY ){
             mainRef.current.style.perspectiveOrigin = `${50 + movement.dx}% ${50 - movement.dy}%`;
         }
+        
         if(x > dimensions.centerX && y > dimensions.centerY){
             mainRef.current.style.perspectiveOrigin = `${50 - movement.dx}% ${50 - movement.dy}%`;
         }
@@ -42,7 +48,7 @@ const Hero = () => {
         handleMainMouseOver;
     },[]);
   return (
-    <main className={styles.main} id="main" onMouseOver={handleMainMouseOver} ref={mainRef}>
+    <main className={styles.main} id="main" onMouseOver={handleMainMouseOver} onTouchStart={handleMainMouseOver} ref={mainRef}>
         <div className={styles.left}></div>
         <div className={styles.right}></div>
         <div className={styles.blur}>
