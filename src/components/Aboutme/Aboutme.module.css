@@ -51,6 +51,8 @@
 .meintro{
     font-family: var(--ff-inter);
     color: var(--c-light-oxford);
+    align-items: baseline;
+    text-align: justify;
     font-size: 1.2rem;
     z-index: 10;
 }
@@ -129,7 +131,5 @@
     }
     .meintro{
         font-size: medium;
-        text-align:justify;
-        word-break: break-all;
     }
 }

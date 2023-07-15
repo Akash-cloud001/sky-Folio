@@ -1,11 +1,18 @@
-import './App.css'
-import Home from './components/Home/Home'
+import { useEffect, useState } from 'react';
+import './App.css';
+import Home from './components/Home/Home';
+import Loader from './components/Loader/Loader';
 
 function App() {
-
+  const [loader, setLoader] = useState(false);
+  useEffect(()=>{
+    setLoader(true);
+    setTimeout(()=>{setLoader(false)},1750);
+  },[])
   return (
     <>
-     <Home />
+      {loader? <Loader /> : <Home />}
+     {/* <Home /> */}
     </>
   )
 }

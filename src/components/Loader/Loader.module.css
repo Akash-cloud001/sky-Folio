@@ -1,0 +1,33 @@
+.loader{
+    position: relative;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--c-hero);
+    overflow: hidden;
+}
+.container{
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--c-oxford);
+    scale: 1;
+    filter: blur(0);
+}
+.container > img{
+    filter: blur(0);
+    animation: imgLoad 1750ms linear forwards;
+    animation-delay: 750ms;
+}
+
+@keyframes  imgLoad{
+    100%{
+        scale: 5;
+        filter: blur(1.5rem);
+    }
+}
