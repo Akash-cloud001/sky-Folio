@@ -6,6 +6,11 @@ import js from '../../assets/images/logo-javascript.svg';
 import reactjs from '../../assets/images/react-2.svg';
 import git from '../../assets/images/git-icon.svg';
 import figma from '../../assets/images/figma-1.svg';
+import node from '../../assets/images/nodejs-icon.svg';
+import tailwind from '../../assets/images/tailwindcss.svg';
+import sass from '../../assets/images/sass-1.svg';
+
+
 const Skills = () => {
   return (
     <section id='skills' className={styles.skills}>
@@ -71,7 +76,32 @@ const Skills = () => {
                 </p>
             </div>
 
-            
+            <div className={styles.skillContent}>
+                <div className={styles.skill}>
+                    <img src={node} />
+                </div>
+                <p className={styles.skillabout}>
+                    Nodejs
+                </p>
+            </div>
+
+            <div className={styles.skillContent}>
+                <div className={styles.skill}>
+                    <img src={sass} />
+                </div>
+                <p className={styles.skillabout}>
+                    sass
+                </p>
+            </div>
+
+            <div className={styles.skillContent}>
+                <div className={styles.skill}>
+                    <img src={tailwind} />
+                </div>
+                <p className={styles.skillabout}>
+                    tailwind
+                </p>
+            </div>
             
             
             

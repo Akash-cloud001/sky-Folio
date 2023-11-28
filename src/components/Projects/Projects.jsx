@@ -3,6 +3,9 @@ import styles from './Projects.module.css';
 import eStore from '../../assets/images/E-s.png';
 import colorPalette from '../../assets/images/colorPalette.png';
 import himalayan from '../../assets/images/H.png';
+import anipedia from '../../assets/images/anipedia.png';
+
+
 const Projects = () => {
   return (
     <section id='projects' className={styles.projects}>
@@ -13,6 +16,27 @@ const Projects = () => {
             </div>
         </header>
         <div className={styles.wrapper} >
+            <div className={styles.project}>
+              <img className={styles.image} src={anipedia} draggable='false'/>
+              <div className={styles.desc}>
+                <header className={styles.name}>ANI-PEDIA</header>
+                <div className={styles.tech}>
+                  <span>React Js </span>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>MUI</span>
+                  <span>Api's</span>
+                  <span>JS</span>
+                </div>
+                <div className={styles.about}>
+                ANI-PEDIA is a web app designed to be your go-to source for all things anime! Whether you're a seasoned otaku or just dipping your toes into the world of anime, ANI PEDIA is here to elevate your experience.
+                </div>
+                <a href='https://ani-pedia.web.app/' target='_blank' className={styles.btn}>
+                  Visit Website
+                </a>
+              </div>
+            </div>
+            
             <div className={styles.project}>
               <img className={styles.image} src={eStore} draggable='false'/>
               <div className={styles.desc}>
@@ -32,7 +56,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className={styles.project}>
             <img className={styles.image} src={colorPalette}  draggable='false'/>
               <div className={styles.desc}>

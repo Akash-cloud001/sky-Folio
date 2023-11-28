@@ -62,8 +62,10 @@
     position: relative;
     height: 6rem;
     width: 6rem;
+    background-color: var(--c-grey);
+    transition: filter 250ms cubic-bezier(0.77,0.2,0.05,1.0);
     filter: grayscale(1);
-    transition: filter 500ms cubic-bezier(0.77,0.2,0.05,1.0);
+
 }
 .skill > img{
     position: absolute;
@@ -74,29 +76,32 @@
     width: 3rem;
 }
 .skillContent:nth-child(1) .skill{
-    background: var(--c-hero);
     border-radius: 89% 11% 74% 26% / 38% 61% 39% 62% ;
 }
 .skillContent:nth-child(2) .skill{
-    background: var(--c-kinda-red);
     border-radius:53% 47% 49% 51% / 60% 76% 24% 40%  ;
 }
 .skillContent:nth-child(3) .skill{
-    background: var(--c-hero);
     border-radius: 30% 70% 55% 45% / 70% 43% 57% 30%;
 }
 .skillContent:nth-child(4) .skill{
-    background: var(--c-kinda-red);
     border-radius: 30% 70% 55% 45% / 70% 43% 57% 30%;
 }
 
 .skillContent:nth-child(5) .skill{
-    background: var(--c-hero);
     border-radius:53% 47% 49% 51% / 60% 76% 24% 40%  ;
 }
 .skillContent:nth-child(6) .skill{
-    background: var(--c-kinda-red);
     border-radius: 89% 11% 74% 26% / 38% 61% 39% 62% ;
+}
+.skillContent:nth-child(7) .skill{
+    border-radius:53% 47% 49% 51% / 60% 76% 24% 40%  ;
+}
+.skillContent:nth-child(8) .skill{
+    border-radius: 30% 70% 55% 45% / 70% 43% 57% 30%;
+}
+.skillContent:nth-child(9) .skill{
+    border-radius: 30% 70% 55% 45% / 70% 43% 57% 30%;
 }
 .skill:hover{
     filter: grayscale(0);
