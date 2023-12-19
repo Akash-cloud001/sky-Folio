@@ -2,7 +2,7 @@ import styles from './Hero.module.css';
 import React, { useEffect } from 'react';
 import { throttle } from 'throttle-debounce';
 import { useRef } from 'react';
-import cv from '../../assets/images/AkashCV.pdf';
+import cv from '../../assets/images/Akash_parmar_Cv.pdf';
 
 const Hero = () => {
     const mainRef = useRef();
